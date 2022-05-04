@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "todo-list",
-    "slug": "todo-list",
+    "name": "Agenda",
+    "slug": "Agenda",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

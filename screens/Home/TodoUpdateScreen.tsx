@@ -50,13 +50,13 @@ export default function TodoUpdateScreen() {
 
     return (
         <View style={styles.container}>
-            <TextInput
+            <TextInput style={styles.title}
                 autoComplete={true}
                 value={title}
                 onChangeText={setTitle}
                 placeholder="Title"
             />
-            <TextInput
+            <TextInput style={styles.description}
                 autoComplete={true}
                 value={description}
                 onChangeText={setDescription}
@@ -65,27 +65,33 @@ export default function TodoUpdateScreen() {
             <TouchableOpacity
                 style={{
                     marginVertical: 10,
-                    backgroundColor: 'blue',
+                    backgroundColor: '#53DDB1',
                     alignItems: 'center',
-                    padding: 20
+                    padding: 20,
+                    width: 335,
+                    marginLeft: 10,
+                    borderRadius:40,
                 }}
                 onPress={submitTodo}
             >
-                <Text>
+                <Text style={styles.submit}>
                     Submit
                 </Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={{
                     marginVertical: 10,
-                    backgroundColor: 'red',
+                    backgroundColor: '#ED0013',
                     alignItems: 'center',
-                    padding: 20
+                    padding: 20,
+                    width: 335,
+                    marginLeft: 10,
+                    borderRadius:40,
                 }}
                 onPress={deleteTodo}
             >
-                <Text>
-                    DELETE
+                <Text style={styles.delete}>
+                    Delete
                 </Text>
             </TouchableOpacity>
         </View>
@@ -95,6 +101,39 @@ export default function TodoUpdateScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        backgroundColor: '#E5E5E5',
+        paddingTop: 10,
+        paddingHorizontal:1,
     },
+    title: {
+        fontFamily: 'poppins-regular',
+        fontSize: 20,
+        paddingLeft: 3,
+        paddingRight: 7,
+        margin: 8,
+        backgroundColor: '#ffffff'
+        
+    },
+    description:{
+        fontFamily: 'poppins-regular',
+        fontSize: 20,
+        paddingLeft: 3,
+        paddingRight: 7,
+        marginBottom: 20,
+        margin: 8,
+        
+        height: 150,
+        backgroundColor: '#ffffff',
+        
+        
+        
+    },
+    submit:{
+        fontSize: 20,
+        color : '#ffffff',
+    },
+    delete: {
+        fontSize: 20,
+        color : '#ffffff',
+    }
 });

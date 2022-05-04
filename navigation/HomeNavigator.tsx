@@ -1,6 +1,6 @@
 import * as React from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import TodoAddScreen from '../screens/Home/TodoAddScreen';
 import TodoListScreen from '../screens/Home/TodoListScreen';
 import { HomeParamList } from '../types';
@@ -19,7 +19,7 @@ export default function HomeNavigator() {
                             navigation.navigate("TodoAdd");
                         }}
                     >
-                        <Text>Add</Text>
+                        <Text style={styles.add}>Add</Text>
                     </TouchableOpacity>
                 )
             })}
@@ -34,3 +34,9 @@ export default function HomeNavigator() {
         </Stack.Navigator>
     );
 }
+const styles = StyleSheet.create({
+    add: {
+        fontSize: 18,
+        color: '#DF4C4C',
+    },
+});

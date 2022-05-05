@@ -62,12 +62,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-marginTop: 10
+marginTop: 15
     },
    title:{
        fontSize: 25,
        backgroundColor: '#A8D8D8',
        marginTop: 1,
+       marginBottom:2,
        paddingHorizontal: 120,
        width: 330,
        paddingLeft: 20,
@@ -76,9 +77,11 @@ marginTop: 10
    description:{
     fontSize: 20,
     backgroundColor: '#E1EDE6',
-    paddingHorizontal: 120,
-    width: 330,
+    // paddingHorizontal: 120,
+    width: '100%',
     paddingLeft: 20,
+    alignItems: 'stretch',
+    paddingRight:20,
    },
    box:{
        backgroundColor: '#E5E5E5',

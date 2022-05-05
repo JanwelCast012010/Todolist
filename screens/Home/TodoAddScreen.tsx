@@ -46,6 +46,7 @@ export default function TodoAddScreen() {
                 value={description}
                 onChangeText={setDescription}
                 placeholder ="Description"
+                multiline={true}
             />
             <TouchableOpacity
                 style={{

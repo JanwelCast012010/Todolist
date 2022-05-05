@@ -16,6 +16,7 @@ declare global {
 
 export type RootStackParamList = {
   Home: undefined;
+  Todo:undefined;
   Profile: undefined;
 };
 

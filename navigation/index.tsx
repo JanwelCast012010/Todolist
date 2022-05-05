@@ -6,8 +6,6 @@
 import { FontAwesome } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import * as React from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
@@ -19,8 +17,11 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeNavigator from './HomeNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
+import ProfileScreen from '../screens/Profile/ProfileScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -36,13 +37,14 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
  * A root stack navigator is often used for displaying modals on top of all other content.
  * https://reactnavigation.org/docs/modal
  */
-const Stack = createNativeStackNavigator<RootStackParamList>();
+ const Drawer = createDrawerNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeNavigator} options={{ headerShown: false }} />
-    </Stack.Navigator>
+    <Drawer.Navigator>
+    <Drawer.Screen name="Home" component={HomeNavigator} />
+    {/* <Drawer.Screen name="Profile" component={ProfileScreen} /> */}
+  </Drawer.Navigator>
   );
 }
 

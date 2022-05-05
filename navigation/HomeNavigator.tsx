@@ -1,15 +1,18 @@
 import * as React from "react";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import TodoAddScreen from '../screens/Home/TodoAddScreen';
 import TodoListScreen from '../screens/Home/TodoListScreen';
 import { HomeParamList } from '../types';
 import TodoUpdateScreen from "../screens/Home/TodoUpdateScreen";
+import TabOneScreen from "../screens/TabOneScreen";
+import Navigation from ".";
 
-const Stack = createNativeStackNavigator<HomeParamList>();
+const Stack = createStackNavigator<HomeParamList>();
 
 export default function HomeNavigator() {
     return (
+
         <Stack.Navigator
             initialRouteName='TodoList'
             screenOptions={({ navigation }) => ({
@@ -24,6 +27,7 @@ export default function HomeNavigator() {
                 )
             })}
         >
+            
             <Stack.Screen name="TodoList" component={TodoListScreen} />
             <Stack.Screen name="TodoAdd" component={TodoAddScreen}
                 options={{
@@ -38,5 +42,6 @@ const styles = StyleSheet.create({
     add: {
         fontSize: 18,
         color: '#DF4C4C',
+        marginRight:20,
     },
 });

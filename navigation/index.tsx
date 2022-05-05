@@ -41,9 +41,11 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 
 function RootNavigator() {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator screenOptions={{
+      headerShown:true
+    }} >
     <Drawer.Screen name="Home" component={HomeNavigator} />
-    {/* <Drawer.Screen name="Profile" component={ProfileScreen} /> */}
+    <Drawer.Screen name="Profile" component={ProfileScreen} />
   </Drawer.Navigator>
   );
 }

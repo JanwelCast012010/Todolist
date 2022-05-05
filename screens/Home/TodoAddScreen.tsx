@@ -18,7 +18,7 @@ export default function TodoAddScreen() {
         const getTodos = await getData('todos');
         const data = new Todo(
             title,
-            description
+            description 
         );
 
         if (getTodos) {
@@ -46,12 +46,12 @@ export default function TodoAddScreen() {
                 value={description}
                 onChangeText={setDescription}
                 placeholder ="Description"
-                multiline={true}
+                
             />
             <TouchableOpacity
                 style={{
                     marginVertical: 10,
-                    backgroundColor: '#53DDB1',
+                    backgroundColor: '#11606F',
                     alignItems: 'center',
                     padding: 20,
                     width: 335,
@@ -71,7 +71,7 @@ export default function TodoAddScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#E5E5E5',
+        backgroundColor: '#D9BE8E',
         paddingTop: 10,
     },
     title: {
@@ -80,7 +80,12 @@ const styles = StyleSheet.create({
         paddingLeft: 3,
         paddingRight: 7,
         margin: 8,
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
+        fontWeight: 'bold',
+        borderRadius:20,
+        borderColor:'#11606F',
+        borderWidth:3,
+        
     },
     description:{
         fontFamily: 'poppins-regular',
@@ -88,11 +93,15 @@ const styles = StyleSheet.create({
         paddingLeft: 3,
         paddingRight: 7,
         margin: 8,
-        height: 150,
-        backgroundColor: '#ffffff'
+        height: 50,
+        backgroundColor: '#ffffff',
+        
+        borderColor:'#11606F',
+        borderWidth:3,
+        paddingBottom:50,
     },
     submit:{
         fontSize: 20,
-        color : '#ffffff',
+        color : '#DAB035',
     }
 });

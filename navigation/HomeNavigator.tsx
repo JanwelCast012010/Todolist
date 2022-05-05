@@ -7,22 +7,32 @@ import { HomeParamList } from '../types';
 import TodoUpdateScreen from "../screens/Home/TodoUpdateScreen";
 import TabOneScreen from "../screens/TabOneScreen";
 import Navigation from ".";
+import { Ionicons } from '@expo/vector-icons';
 
 const Stack = createStackNavigator<HomeParamList>();
 
 export default function HomeNavigator() {
     return (
 
-        <Stack.Navigator
+        <Stack.Navigator 
             initialRouteName='TodoList'
             screenOptions={({ navigation }) => ({
+                headerStyle:{
+                    backgroundColor:'#11606F',
+                    
+                },
+                headerTitleStyle:{
+                        color:'#D9BE8E',
+                        fontWeight: 'bold',
+                },
+    
                 headerRight: () => (
                     <TouchableOpacity
                         onPress={() => {
                             navigation.navigate("TodoAdd");
                         }}
                     >
-                        <Text style={styles.add}>Add</Text>
+                        <Text style={styles.add}>+</Text>
                     </TouchableOpacity>
                 )
             })}
@@ -40,8 +50,9 @@ export default function HomeNavigator() {
 }
 const styles = StyleSheet.create({
     add: {
-        fontSize: 18,
-        color: '#DF4C4C',
+        fontSize: 40,
+        color: '#D9BE8E',
         marginRight:20,
+        fontWeight: 'bold',
     },
 });

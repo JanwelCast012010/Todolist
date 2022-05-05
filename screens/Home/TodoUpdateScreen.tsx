@@ -65,7 +65,7 @@ export default function TodoUpdateScreen() {
             <TouchableOpacity
                 style={{
                     marginVertical: 10,
-                    backgroundColor: '#53DDB1',
+                    backgroundColor: '#11606F',
                     alignItems: 'center',
                     padding: 20,
                     width: 335,
@@ -81,12 +81,13 @@ export default function TodoUpdateScreen() {
             <TouchableOpacity
                 style={{
                     marginVertical: 10,
-                    backgroundColor: '#ED0013',
+                    backgroundColor: '#9D2E25',
                     alignItems: 'center',
                     padding: 20,
                     width: 335,
                     marginLeft: 10,
                     borderRadius:40,
+                    
                 }}
                 onPress={deleteTodo}
             >
@@ -101,7 +102,7 @@ export default function TodoUpdateScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#E5E5E5',
+        backgroundColor: '#D9BE8E',
         paddingTop: 10,
         paddingHorizontal:1,
     },
@@ -111,22 +112,24 @@ const styles = StyleSheet.create({
         paddingLeft: 3,
         paddingRight: 7,
         margin: 8,
-        backgroundColor: '#ffffff'
-        
+        backgroundColor: '#ffffff',
+        fontWeight: 'bold',
+        borderRadius:20,
+        borderColor:'#11606F',
+        borderWidth:3,
     },
     description:{
         fontFamily: 'poppins-regular',
         fontSize: 20,
         paddingLeft: 3,
         paddingRight: 7,
-        marginBottom: 20,
         margin: 8,
-        
-        height: 150,
+        height: 50,
         backgroundColor: '#ffffff',
         
-        
-        
+        borderColor:'#11606F',
+        borderWidth:3,
+        paddingBottom:50,
     },
     submit:{
         fontSize: 20,

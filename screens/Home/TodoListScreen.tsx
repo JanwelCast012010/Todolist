@@ -28,8 +28,9 @@ export default function TodoListScreen() {
     )
 
     return (
+        <View style = {styles.container}>
         <ScrollView>
-        <View style={styles.container}>
+        <View>
             {todos ?
                 <React.Fragment>
                     {todos.map((data: Todo, index: number) => (
@@ -55,6 +56,7 @@ export default function TodoListScreen() {
             }
         </View>
         </ScrollView>
+        </View>
     );
 }
 
@@ -62,35 +64,42 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-marginTop: 15
+        backgroundColor: '#D9BE8E',
+        
     },
    title:{
        fontSize: 25,
-       backgroundColor: '#A8D8D8',
+       backgroundColor: '#11606F',
        marginTop: 1,
-       marginBottom:2,
+       marginBottom:0,
        paddingHorizontal: 120,
        width: 330,
        paddingLeft: 20,
       fontWeight: 'bold',
+      color:'#D9BE8E',
+      paddingBottom:3,
    },
    description:{
     fontSize: 20,
-    backgroundColor: '#E1EDE6',
+    backgroundColor: '#ffffff',
     // paddingHorizontal: 120,
     width: '100%',
     paddingLeft: 20,
     alignItems: 'stretch',
     paddingRight:20,
+    paddingBottom:3,
+    color:'#11606F',
    },
    box:{
        backgroundColor: '#E5E5E5',
        width: 330,
+       marginTop:10,
+       
        
    },
    boxs:{
     backgroundColor: '#E5E5E5',
     width: 330,
-    marginBottom: 20,
+   
 },
 });
